@@ -10,7 +10,11 @@ public class Main {
     public static void main(String[] args) {
         Rectangle r1 = new Rectangle();
         Rectangle r2 = new Rectangle(10,11);
+        Rectangle r3 = new Rectangle();
+        r3.setWidth(6);
+        r3.setHeight(5);
         System.out.format("r1 Area:  %d | Perimeter: %d.\n", r1.calculateArea(),r1.calculatePerimeter());
         System.out.format("r2 Area: %d | Perimeter: %d.\n", r2.calculateArea(),r2.calculatePerimeter());
+        System.out.format("r3 Area:  %d | Perimeter: %d.\n", r3.calculateArea(),r3.calculatePerimeter());
     }
 }
