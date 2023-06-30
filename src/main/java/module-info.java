@@ -4,5 +4,4 @@ module com.example.oopjava {
 
 
     opens com.example.oopjava to javafx.fxml;
-    exports com.example.oopjava;
 }
