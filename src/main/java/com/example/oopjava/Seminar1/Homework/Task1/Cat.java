@@ -1,7 +1,7 @@
 package com.example.oopjava.Seminar1.Homework.Task1;
 
 /*Исходил из той логики, что каждый уважающий себя котик имеет хозяйна*/
-public class Cat{
+public class Cat {
     private Owner owner = new Owner();
     private String name;
     private Integer age;
@@ -9,6 +9,7 @@ public class Cat{
     public Integer getAge() {
         return age;
     }
+
     public void setAge(Integer age) {
         this.age = age;
     }
@@ -20,6 +21,8 @@ public class Cat{
     public String getName() {
         return name;
     }
+    /*Подумал, что информацию из owner, по условиям задачи лучше брать через создание объекат в классе,
+    * а не через наследование*/
     public String getOwnerName() {
         return owner.getOwnerName();
     }
@@ -30,9 +33,10 @@ public class Cat{
 
 
     public Cat(String name, Integer age) {
+        /*На случай если лень самому выдумывать название, подставляем пседорандомное из трех вариантов*/
         String[] catName = {"Барсик", "Мурзик", "Мурка"};
         if (name.equals("")) {
-            this.name = catName[(int)(Math.random()*3)];
+            this.name = catName[(int) (Math.random() * 3)];
         } else {
             this.name = name;
         }
@@ -40,10 +44,10 @@ public class Cat{
     }
 
     public Cat() {
-        this("", (int)(Math.random()*18));
+        this("", (int) (Math.random() * 18));
     }
 
-    public void greet(){
+    public void greet() {
         System.out.format("Мяу! Меня зовут %s. Мне %d года(лет). Мой владелец - %s.\n",
                 this.name, this.age, owner.getOwnerName());
     }
