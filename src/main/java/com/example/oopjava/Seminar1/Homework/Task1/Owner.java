@@ -1,7 +1,7 @@
 package com.example.oopjava.Seminar1.Homework.Task1;
 
 public class Owner{
-    protected String ownerName;
+    private String ownerName;
 
     public String getOwnerName() {
         return ownerName;
@@ -10,6 +10,7 @@ public class Owner{
     public void setOwnerName(String ownerName) {
         this.ownerName = ownerName;
     }
+
     public Owner(String ownerName){
         this.ownerName = ownerName;
     }

@@ -1,7 +1,8 @@
 package com.example.oopjava.Seminar1.Homework.Task1;
 
 /*Исходил из той логики, что каждый уважающий себя котик имеет хозяйна*/
-public class Cat extends Owner{
+public class Cat{
+    private Owner owner = new Owner();
     private String name;
     private Integer age;
 
@@ -19,6 +20,14 @@ public class Cat extends Owner{
     public String getName() {
         return name;
     }
+    public String getOwnerName() {
+        return owner.getOwnerName();
+    }
+
+    public void setOwnerName(String ownerName) {
+        this.owner.setOwnerName(ownerName);
+    }
+
 
     public Cat(String name, Integer age) {
         String[] catName = {"Барсик", "Мурзик", "Мурка"};
@@ -36,6 +45,6 @@ public class Cat extends Owner{
 
     public void greet(){
         System.out.format("Мяу! Меня зовут %s. Мне %d года(лет). Мой владелец - %s.\n",
-                this.name, this.age, this.ownerName);
+                this.name, this.age, owner.getOwnerName());
     }
 }
