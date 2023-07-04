@@ -2,7 +2,7 @@ package com.example.oopjava.Seminar1.Homework.Task1;
 
 /*Исходил из той логики, что каждый уважающий себя котик имеет хозяйна*/
 public class Cat {
-    private Owner owner = new Owner();
+    private final Owner owner = new Owner();
     private String name;
     private Integer age;
 
