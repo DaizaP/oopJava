@@ -1,9 +1,9 @@
 package com.example.oopjava.Seminar2.Homework.Task1.Cat;
 
-import com.example.oopjava.Seminar2.Homework.Task1.Cat.Interface.TypeOfCats;
+import com.example.oopjava.Seminar2.Homework.Task1.Cat.Interface.Cats;
 
 /*Исходил из той логики, что каждый уважающий себя котик имеет хозяйна*/
-public class Cat implements TypeOfCats{
+public class Cat implements Cats {
     private final Owner owner = new Owner();
     private String name;
     private Integer age;

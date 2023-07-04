@@ -1,8 +1,8 @@
 package com.example.oopjava.Seminar2.Homework.Task1.Cat;
 
-import com.example.oopjava.Seminar2.Homework.Task1.Cat.Interface.TypeOfOwner;
+import com.example.oopjava.Seminar2.Homework.Task1.Cat.Interface.Owners;
 
-public class Owner implements TypeOfOwner{
+public class Owner implements Owners {
     private String ownerName;
     private Integer value;
     private String job;
