@@ -1,4 +1,4 @@
-package Lesson_08.Ex006.Document;
+package com.example.oopjava.Seminar2.Lesson2.Ex006.Document;
 
 public class TextDocument {
 

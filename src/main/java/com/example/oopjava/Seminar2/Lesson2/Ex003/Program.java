@@ -1,11 +1,11 @@
-package Lesson_08.Ex003;
+package com.example.oopjava.Seminar2.Lesson2.Ex003;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import Lesson_08.Ex003.alliance.*;
-import Lesson_08.Ex003.*;
+import com.example.oopjava.Seminar2.Lesson2.Ex003.alliance.*;
+import com.example.oopjava.Seminar2.Lesson2.Ex003.*;
 
 public class Program {
     public static void main(String[] args) {

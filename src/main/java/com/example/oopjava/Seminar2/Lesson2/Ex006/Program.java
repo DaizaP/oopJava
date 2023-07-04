@@ -1,7 +1,7 @@
-package Lesson_08.Ex006;
+package com.example.oopjava.Seminar2.Lesson2.Ex006;
 
-import Lesson_08.Ex006.Applications.Notepad;
-import Lesson_08.Ex006.Format.*;
+import com.example.oopjava.Seminar2.Lesson2.Ex006.Applications.Notepad;
+import com.example.oopjava.Seminar2.Lesson2.Ex006.Format.*;
 
 public class Program {
     public static void main(String[] args) {

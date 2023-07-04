@@ -1,4 +1,4 @@
-package Lesson_08.Ex003;
+package com.example.oopjava.Seminar2.Lesson2.Ex003;
 
 public class Druid extends BaseHero {
     private int harmony;

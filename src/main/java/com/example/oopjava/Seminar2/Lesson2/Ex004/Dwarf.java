@@ -1,4 +1,4 @@
-package Lesson_08.Ex004;
+package com.example.oopjava.Seminar2.Lesson2.Ex004;
 
 public class Dwarf extends Druid {
     

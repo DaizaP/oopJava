@@ -1,4 +1,4 @@
-package Lesson_07.Ex006;
+package com.example.oopjava.Seminar1.Lesson1.Ex006;
 
 public class Program {
     public static void main(String[] args) {
