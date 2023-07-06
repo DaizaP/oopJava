@@ -6,7 +6,6 @@ import com.example.oopjava.Seminar3.Homework.Cat.Interface.Owners;
 public class Owner extends Owners {
 
     private Cat cat = null;
-    private boolean count = false;
 
     public void greet() {
         if (cat != null) {
