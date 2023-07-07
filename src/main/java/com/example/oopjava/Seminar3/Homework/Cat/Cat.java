@@ -1,14 +1,15 @@
 package com.example.oopjava.Seminar3.Homework.Cat;
 
 import com.example.oopjava.Seminar3.Homework.Cat.Interface.Cats;
+import com.example.oopjava.Seminar3.Homework.Cat.Interface.HW3Interface.Valid;
 import com.example.oopjava.Seminar3.Homework.Cat.Interface.Owners;
 
 public class Cat extends Cats {
-
+    Valid valid = (n) -> n != null;
     private Owner owner = null;
 
     public void greet() {
-        if (owner != null) {
+        if (valid.test(owner)) {
             System.out.format("Мяу! Меня зовут %s. Мне %d года(лет). Мой владелец - %s.\n",
                     this.catName, this.ageCat, this.owner.getOwnerName());
         } else {
@@ -17,7 +18,7 @@ public class Cat extends Cats {
         }
     }
     public void getFullInfoOwner(){
-        if(owner != null) {
+        if(valid.test(owner)) {
             owner.getFullInfoOwner();
         }else{
             System.out.format("У котика %s владельца нет :(\n", this.catName);

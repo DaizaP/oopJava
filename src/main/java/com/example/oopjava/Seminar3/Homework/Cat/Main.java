@@ -2,7 +2,10 @@ package com.example.oopjava.Seminar3.Homework.Cat;
 
 
 import com.example.oopjava.Seminar3.Homework.Cat.Interface.Cats;
+import com.example.oopjava.Seminar3.Homework.Cat.Interface.HW3Interface.IterCat;
 import com.example.oopjava.Seminar3.Homework.Cat.Interface.Owners;
+
+import java.util.ArrayList;
 
 /**Создайте класс "Кот" (Cat) со следующими свойствами:
 
@@ -18,21 +21,22 @@ import com.example.oopjava.Seminar3.Homework.Cat.Interface.Owners;
  Меня зовут <имя>. Мне <возраст> года(лет). Мой владелец - <имя владельца>.".*/
 public class Main {
     public static void main(String[] args) {
-        Owner owner = new Owner("Василий", 22, "Продавец", 45000, 100);
-        Owner owner1 = new Owner("Николай");
-        Owner owner2 = new Owner();
+        //Оставил только методы для реализации последнего домашнего задания
+        ArrayList<Cats> catsArrayList = new ArrayList<>();
+        IterCat iterCat = new IterCat(catsArrayList);
         Cat cat = new Cat("Мурка", 2, 6, "Синий");
         Cat cat1 = new Cat();
         Cat cat2 = new Cat();
-        cat1.setOwner(owner1, cat1);
-        cat1.setAgeCat(10);
-        cat1.setColorEyesCat("Красный");
-        cat1.greet();
-        cat1.getFullInfoOwner();
-        owner1.getFullInfoCat();
-        owner.greet();
-        owner.getFullInfoOwner();
-        owner.getFullInfoCat();
-        cat2.greet();
+        Cat cat3 = new Cat();
+        Cat cat4 = new Cat();
+        catsArrayList.add(cat);
+        catsArrayList.add(cat1);
+        catsArrayList.add(cat2);
+        catsArrayList.add(cat3);
+        catsArrayList.add(cat4);
+        for (Cats z: iterCat) {
+            z.getFullInfoCat();
+        }
+
     }
 }
