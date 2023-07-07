@@ -5,9 +5,10 @@ import com.example.oopjava.Seminar3.Homework.Cat.Interface.HW3Interface.Valid;
 import com.example.oopjava.Seminar3.Homework.Cat.Interface.Owners;
 
 public class Cat extends Cats {
-    Valid valid = (n) -> n != null;
+    private Valid valid = (n) -> n != null;
     private Owner owner = null;
 
+    //Воть тут использовал функциональный интерфейс Valid
     public void greet() {
         if (valid.test(owner)) {
             System.out.format("Мяу! Меня зовут %s. Мне %d года(лет). Мой владелец - %s.\n",
@@ -17,6 +18,7 @@ public class Cat extends Cats {
                     this.catName, this.ageCat);
         }
     }
+    //Воть тут использовал функциональный интерфейс Valid
     public void getFullInfoOwner(){
         if(valid.test(owner)) {
             owner.getFullInfoOwner();

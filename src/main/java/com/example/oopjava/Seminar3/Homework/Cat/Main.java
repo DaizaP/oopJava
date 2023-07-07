@@ -21,9 +21,10 @@ import java.util.ArrayList;
  Меня зовут <имя>. Мне <возраст> года(лет). Мой владелец - <имя владельца>.".*/
 public class Main {
     public static void main(String[] args) {
-        //Оставил только методы для реализации последнего домашнего задания
+        //Оставил только методы для проверки реализации последнего домашнего задания
         ArrayList<Cats> catsArrayList = new ArrayList<>();
         IterCat iterCat = new IterCat(catsArrayList);
+        Owner owner = new Owner();
         Cat cat = new Cat("Мурка", 2, 6, "Синий");
         Cat cat1 = new Cat();
         Cat cat2 = new Cat();
@@ -37,6 +38,10 @@ public class Main {
         for (Cats z: iterCat) {
             z.getFullInfoCat();
         }
+        // Проверка функционального интерфейса Valid
+        cat.setOwner(owner, cat);
+        cat.getFullInfoOwner();
+
 
     }
 }
