@@ -40,7 +40,10 @@ public class Main {
         }
         // Проверка функционального интерфейса Valid
         cat.setOwner(owner, cat);
+        //Выведет инфу
         cat.getFullInfoOwner();
+        //Не выведет
+        cat2.getFullInfoOwner();
 
 
     }
