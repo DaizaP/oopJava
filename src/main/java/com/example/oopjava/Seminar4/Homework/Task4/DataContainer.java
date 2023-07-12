@@ -12,14 +12,14 @@ public class DataContainer<T> {
     }
 
     T get(int o) {
-        return arr.get(o);
+        return this.arr.get(o);
     }
 
     void sort(Comparator<T> o) {
-        arr.sort(o);
+        this.arr.sort(o);
     }
 
     void print() {
-        System.out.println(arr.toString());
+        System.out.println(this.arr.toString());
     }
 }
