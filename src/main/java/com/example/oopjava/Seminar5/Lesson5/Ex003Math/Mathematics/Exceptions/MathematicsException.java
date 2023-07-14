@@ -1,0 +1,7 @@
+package com.example.oopjava.Seminar5.Lesson5.Ex003Math.Mathematics.Exceptions;
+
+public class MathematicsException extends Exception {
+    public MathematicsException(String msg) {
+        super(msg);
+    }
+}
