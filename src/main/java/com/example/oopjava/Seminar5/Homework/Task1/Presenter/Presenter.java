@@ -16,8 +16,10 @@ public class Presenter {
     private void buttonClick() {
         String a = view.getValue("a: ");
         String b = view.getValue("b: ");
-        while (!(a.chars().allMatch(Character::isDigit)|| a.contains(".")) ||
-               !(b.chars().allMatch(Character::isDigit)|| b.contains("."))) {
+        //Проверка или дробное число (RegEx валидация) Пытался сам составить, но долго допирал,
+        // посмотрел в инете продвинутую форму
+        while (!a.matches("^[-+]?[0-9]*[.]?[0-9]+(?:[eE][-+]?[0-9]+)?$") ||
+               !b.matches("^[-+]?[0-9]*[.]?[0-9]+(?:[eE][-+]?[0-9]+)?$")) {
             System.out.println(new Exception("В значение принимаются только цифры"));
             a = view.getValue("a: ");
             b = view.getValue("b: ");
@@ -58,3 +60,5 @@ public class Presenter {
         view.print(result, "Умножение: ");
     }
 }
+//a.chars().allMatch(Character::isLetter,Character::)||
+//        b.chars().allMatch(Character::isLetter)
