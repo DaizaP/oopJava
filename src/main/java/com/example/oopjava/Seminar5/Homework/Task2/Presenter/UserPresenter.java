@@ -4,6 +4,7 @@ import com.example.oopjava.Seminar5.Homework.Task2.Model.User;
 import com.example.oopjava.Seminar5.Homework.Task2.View.UserView;
 
 public class UserPresenter {
+    //Проверка, что пользователь вошел в систему
     private boolean bGate = false;
     User user;
     UserView userView;
