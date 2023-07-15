@@ -18,8 +18,8 @@ public class Presenter {
         String b = view.getValue("b: ");
         //RegEx валидация пытался сам составить, но долго допирал,
         // посмотрел в инете продвинутую форму, на проверку дробного или целого числа
-        while (!a.matches(model.RegExValidNum) ||
-               !b.matches(model.RegExValidNum)) {
+        while (!a.matches(this.model.RegExValidNum) ||
+               !b.matches(this.model.RegExValidNum)) {
             this.view.notification1.incorrectNumber();
             a = view.getValue("a: ");
             b = view.getValue("b: ");

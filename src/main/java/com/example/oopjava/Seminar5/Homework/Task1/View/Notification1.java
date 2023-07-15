@@ -6,6 +6,6 @@ public class Notification1 {
     }
 
     public void exception(Exception e) {
-        System.out.println("Ошибка: " + e);
+        System.out.println("Ошибка: " + e.getMessage());
     }
 }
