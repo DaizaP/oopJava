@@ -6,7 +6,7 @@ public class UserView {
 
     //Не делал наследование т.к. хотел, чтобы в presenter было видно где я просто уведомление вызываю,
     // а где методы для отображения полей взаимодействия
-    public Notification notification;
+    public Notification notification = new Notification();
     Scanner in = new Scanner(System.in);
 
     /**

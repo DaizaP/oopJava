@@ -9,8 +9,8 @@ public class Presenter {
     Model<Number> model;
 
     public Presenter(Model<Number> m, View v) {
-        model = m;
-        view = v;
+        this.model = m;
+        this.view = v;
     }
 
     private void buttonClick() {
@@ -18,12 +18,13 @@ public class Presenter {
         String b = view.getValue("b: ");
         //RegEx валидация пытался сам составить, но долго допирал,
         // посмотрел в инете продвинутую форму, на проверку дробного или целого числа
-        while (!a.matches("^[-+]?[0-9]*[.]?[0-9]+(?:[eE][-+]?[0-9]+)?$") ||
-               !b.matches("^[-+]?[0-9]*[.]?[0-9]+(?:[eE][-+]?[0-9]+)?$")) {
-            System.out.println(new Exception("Принимаются только целые или дробные числа"));
+        while (!a.matches(model.RegExValidNum) ||
+               !b.matches(model.RegExValidNum)) {
+            this.view.notification1.incorrectNumber();
             a = view.getValue("a: ");
             b = view.getValue("b: ");
         }
+
 
         if (a.contains(".") || b.contains(".")) {
             model.setX(Double.parseDouble(a));
@@ -60,5 +61,3 @@ public class Presenter {
         view.print(result, "Умножение: ");
     }
 }
-//a.chars().allMatch(Character::isLetter,Character::)||
-//        b.chars().allMatch(Character::isLetter)
