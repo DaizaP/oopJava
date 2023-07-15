@@ -26,14 +26,14 @@ public class UserPresenter {
 
     public void gate() {
         if (bGate) {
-            System.out.println("Вы уже вошли.");
+            userView.notification.alreadyLoggedIn();
         } else {
             String[] gateInfo = this.userView.gate();
             while (!(this.user.getLogin().equals(gateInfo[0]) && user.getPass().equals(gateInfo[1]))) {
-                System.out.println("Неверный логин или пароль:");
+                userView.notification.incorrectPassAndLogin();
                 gateInfo = this.userView.gate();
             }
-            System.out.println("Вы вошли:");
+            userView.notification.gate();
             bGate = true;
         }
     }
@@ -41,26 +41,26 @@ public class UserPresenter {
         if (bGate) {
             userView.getInfo(user.getInfo());
         }else {
-            System.out.println("Вы не вошли в систему:");
+            userView.notification.NotLoggedInYet();
         }
     }
     public void setInfo() {
         if (bGate) {
             this.user.setInfo(this.userView.editInfo());
         }else {
-            System.out.println("Вы не вошли в систему:");
+            userView.notification.NotLoggedInYet();
         }
     }
 
     public void setPassAndLogin() {
-        String[] str = this.userView.edit();
+        String[] str = this.userView.editPassAndLogin();
         if (bGate) {
             this.user.setLogin(str[0]);
             this.user.setPass(str[1]);
             bGate = false;
-            System.out.println("Готово. Необходимо войти заново.");
+            userView.notification.setPass();
         }else {
-            System.out.println("Вы не вошли в систему:");
+            userView.notification.NotLoggedInYet();
         }
     }
 
