@@ -19,49 +19,49 @@ public class UserPresenter {
             System.out.println(" Вы зарегистрированы. Направляю на вход.");
             gate();
         } else {
-            String[] reqInfo = userView.req();
+            String[] reqInfo = this.userView.req();
             this.user.setLogin(reqInfo[0]);
             this.user.setPass(reqInfo[1]);
         }
     }
 
     public void gate() {
-        if (bGate) {
-            userView.notification.alreadyLoggedIn();
+        if (this.bGate) {
+            this.userView.notification.alreadyLoggedIn();
         } else {
             String[] gateInfo = this.userView.gate();
-            while (!(this.user.getLogin().equals(gateInfo[0]) && user.getPass().equals(gateInfo[1]))) {
-                userView.notification.incorrectPassAndLogin();
+            while (!(this.user.getLogin().equals(gateInfo[0]) && this.user.getPass().equals(gateInfo[1]))) {
+                this.userView.notification.incorrectPassAndLogin();
                 gateInfo = this.userView.gate();
             }
-            userView.notification.gate();
-            bGate = true;
+            this.userView.notification.gate();
+            this.bGate = true;
         }
     }
     public void getInfo(){
-        if (bGate) {
-            userView.getInfo(user.getInfo());
+        if (this.bGate) {
+            this.userView.getInfo(this.user.getInfo());
         }else {
-            userView.notification.NotLoggedInYet();
+            this.userView.notification.NotLoggedInYet();
         }
     }
     public void setInfo() {
-        if (bGate) {
+        if (this.bGate) {
             this.user.setInfo(this.userView.editInfo());
         }else {
-            userView.notification.NotLoggedInYet();
+            this.userView.notification.NotLoggedInYet();
         }
     }
 
     public void setPassAndLogin() {
         String[] str = this.userView.editPassAndLogin();
-        if (bGate) {
+        if (this.bGate) {
             this.user.setLogin(str[0]);
             this.user.setPass(str[1]);
-            bGate = false;
-            userView.notification.setPass();
+            this.bGate = false;
+            this.userView.notification.setPass();
         }else {
-            userView.notification.NotLoggedInYet();
+            this.userView.notification.NotLoggedInYet();
         }
     }
 
