@@ -1,7 +1,7 @@
 package com.example.oopjava.Seminar6.Homework.Task1.Model;
 
 // Здесь применяем первый принцип. Был класс Calk в котором было 5 методов (sum, sub, div, mul),
-// был разделен на 4 отдельных метода
+// был разделен на 4 отдельных метода с универсальными переменными
 public class CalkSum extends CalcModel {
 
     public CalkSum() {
@@ -11,7 +11,7 @@ public class CalkSum extends CalcModel {
     public String expressionType() {
         return "Сумма";
     }
-
+    @Override
     public Number res() {
         if (super.x instanceof Double || super.y instanceof Double) {
             return super.x.doubleValue() + super.y.doubleValue();

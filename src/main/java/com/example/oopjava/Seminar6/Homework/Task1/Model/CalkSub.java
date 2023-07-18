@@ -8,6 +8,7 @@ public class CalkSub extends CalcModel {
     public String expressionType() {
         return "Разница";
     }
+    @Override
     public Number res() {
         if (super.x instanceof Double || super.y instanceof Double) {
             return super.x.doubleValue() - super.y.doubleValue();

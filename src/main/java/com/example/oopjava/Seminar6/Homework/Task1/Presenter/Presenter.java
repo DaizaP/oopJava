@@ -31,7 +31,7 @@ public class Presenter {
             model.setX(Integer.valueOf(a));
             model.setY(Integer.valueOf(b));
         }
-        //вычисление
+        //вычисление менял тут, для выполнения первого принципа(Убрал лишние методы, оставил один "универсальный")
         var result = model.res();
         view.print(result, model.expressionType());
     }
