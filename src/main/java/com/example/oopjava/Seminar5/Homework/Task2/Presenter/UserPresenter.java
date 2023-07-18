@@ -4,8 +4,6 @@ import com.example.oopjava.Seminar5.Homework.Task2.Model.User;
 import com.example.oopjava.Seminar5.Homework.Task2.View.UserView;
 
 public class UserPresenter {
-    //Проверка, что пользователь вошел в систему
-    private boolean bGate = false;
     User user;
     UserView userView;
 
@@ -26,7 +24,8 @@ public class UserPresenter {
     }
 
     public void gate() {
-        if (this.bGate) {
+        //Проверка, что пользователь вошел в систему
+        if (this.user.isBoolGate()) {
             this.userView.notification.alreadyLoggedIn();
         } else {
             String[] gateInfo = this.userView.gate();
@@ -35,32 +34,34 @@ public class UserPresenter {
                 gateInfo = this.userView.gate();
             }
             this.userView.notification.gate();
-            this.bGate = true;
+            this.user.setBoolGate(true);
         }
     }
-    public void getInfo(){
-        if (this.bGate) {
+
+    public void getInfo() {
+        if (this.user.isBoolGate()) {
             this.userView.getInfo(this.user.getInfo());
-        }else {
+        } else {
             this.userView.notification.NotLoggedInYet();
         }
     }
+
     public void setInfo() {
-        if (this.bGate) {
+        if (this.user.isBoolGate()) {
             this.user.setInfo(this.userView.editInfo());
-        }else {
+        } else {
             this.userView.notification.NotLoggedInYet();
         }
     }
 
     public void setPassAndLogin() {
         String[] str = this.userView.editPassAndLogin();
-        if (this.bGate) {
+        if (this.user.isBoolGate()) {
             this.user.setLogin(str[0]);
             this.user.setPass(str[1]);
-            this.bGate = false;
+            this.user.setBoolGate(false);
             this.userView.notification.setPass();
-        }else {
+        } else {
             this.userView.notification.NotLoggedInYet();
         }
     }

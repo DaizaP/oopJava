@@ -4,6 +4,7 @@ public class User {
     private String login;
     private String pass;
     private String info = "";
+    private boolean bGate = false;
 
     public User() {
 
@@ -31,5 +32,13 @@ public class User {
 
     public void setLogin(String login) {
         this.login = login;
+    }
+
+    public void setBoolGate(boolean bGate) {
+        this.bGate = bGate;
+    }
+
+    public boolean isBoolGate() {
+        return bGate;
     }
 }
