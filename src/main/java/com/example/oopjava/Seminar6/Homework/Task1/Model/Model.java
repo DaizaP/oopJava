@@ -8,6 +8,5 @@ public interface Model<T extends Number> {
     String expressionType();
     T res();
     void setX(T value);
-
     void setY(T value);
 }
